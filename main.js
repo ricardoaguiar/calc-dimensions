@@ -2,9 +2,9 @@ const checkWeight = document.getElementById("checkGW");
 
 console.log(checkWeight);
 
-// checkDiff.addEventListener("click", => console.log(calcPercentage())
+checkDiff.addEventListener("click", => console.log(calcPercentage())
 
-// console.log(checkDiff);
+console.log(checkDiff);
 
 // console.log(calcPercentage());
 
