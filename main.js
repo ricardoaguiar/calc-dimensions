@@ -6,15 +6,14 @@ checkDiff.addEventListener("click", => console.log(calcPercentage())
 
 console.log(checkDiff);
 
-// console.log(calcPercentage());
+console.log(calcPercentage());
 
-// function calcWeight(result) {
-//   const cartonGW = document.getElementById("carton_gw").value;
-//   const inspectionGW = document.getElementById("inspection_gw").value;
-//   const verifiedGW = document.getElementById("verified_gw").value;
-
-//   let labelDiff = document.getElementById("label_diff");
-//   let sapDiff = document.getElementById("sap_diff");
+function calcWeight(result) {
+const cartonGW = document.getElementById("carton_gw").value;
+const inspectionGW = document.getElementById("inspection_gw").value;
+ const verifiedGW = document.getElementById("verified_gw").value;
+   let labelDiff = document.getElementById("label_diff");
+  let sapDiff = document.getElementById("sap_diff");
 
 //   let upperLimit = document.getElementById("upper_limit");
 //   let lowerLimit = document.getElementById("lower_limit");
