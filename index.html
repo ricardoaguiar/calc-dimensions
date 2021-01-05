@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+  <title>Packaging Master Data Corrections</title>
+</head>
+
+<body>
+  <main>
+    <header>
+      <h1>Master Data Package Measurements</h1>
+    </header>
+
+    <div>
+      <h2>Weight Tolerances</h2>
+      <ul class="grid tolerances">
+        <li class="tolerances1">Weight</li>
+        <li class="tolerances2">Tolerance</li>
+        <li class="tolerances3">Minimum variation before creating a notification</li>
+        <li class="tolerances4">0 - 1 kg</li>
+        <li class="tolerances5">10%</li>
+        <li class="tolerances6">50g</li>
+        <li class="tolerances7">1 - 5 kg</li>
+        <li class="tolerances8">8%</li>
+        <li class="tolerances9">100g</li>
+        <li class="tolerances10">5 - 10 kg</li>
+        <li class="tolerances11">6%</li>
+        <li class="tolerances12">500g</li>
+        <li class="tolerances13">10 - 25kg</li>
+        <li class="tolerances14">5%</li>
+        <li class="tolerances15">1000g</li>
+        <li class="tolerances16">&gt; 25kg</li>
+        <li class="tolerances17">3%</li>
+        <li class="tolerances18">1500g</li>
+      </ul>
+    </div>
+
+    <div class="carton-data">
+      <h2>SAP Data</h2>
+      <ul class="grid sap-data">
+        <li>
+          <span>ST GW</span>
+          <input type="text" id="car_gw" label="car_gw" class="input-field" /></li>
+        <li>ST NW<input type="text" id="inspection_gw" label="inspection_gw" /></li>
+        <li>ST WIDTH <input type="text" id="car_gw" label="car_gw" class="input-field" /></li>
+        <li>ST LENGHT<input type="text" id="inspection_gw" label="inspection_gw" class="input-field" /></li>
+        <li>ST HEIGHT<input type="text" id="inspection_gw" label="inspection_gw" class="input-field" /></li>
+        
+        <li>CAR GW <input type="text" id="car_gw" label="car_gw" /></li>
+        <li>ST WIDTH <input type="text" id="car_gw" label="car_gw" /></li>
+        <li>ST LENGHT<input type="text" id="inspection_gw" label="inspection_gw" /></li>
+        <li>ST HEIGHT<input type="text" id="inspection_gw" label="inspection_gw" /></li>
+        <li>Colli Size<select id="colli_size" label="colli_size">
+          <option>Select</option> 
+          <option>1</option> 
+          <option>2</option> 
+          <option>3</option> 
+          <option>4</option> 
+          <option>5</option> 
+          <option>6</option> 
+          <option>7</option> 
+          <option>8</option> 
+          <option>9</option> 
+          <option>10</option> 
+          <option>12</option> 
+          <option>15</option> 
+        </select></li>
+        <li>Variation %<input type="text" id="verified_gw" label="verified_gw" /></li>
+        <li>Label Difference <span id="label_diff"></span></li>
+        <li>2% Above: <span id="upperWeightLimit"></span></li>
+        <li>2% Below: <span id="lowerWeightLimit"></span></li>
+        <li class="checkWeight">
+          <button id="checkGW" onclick="calcPercentage()">Check Weight</button>
+        </li>
+      </ul>
+      <h2 class="weight-range">WEIGHT RANGE IN KG</h2>
+</div>
+
+<div>
+      <ul class="dimensions">
+        <li>DIMENSIONS</li>
+        <li class="item-0">Measurements</li>
+        <li class="item-2">Lenght:</li>
+        <li class="item-3">Width:</li>
+        <li class="item-4">Height:</li>
+        <li class="item-1">SAP</li>
+        <li><input type="number" id="sap_lenght" /></li>
+        <li><input type="number" id="sap_width" /></li>
+        <li><input type="number" id="sap_height" /></li>
+        <li class="item-5">CARTON</li>
+        <li>CARTON LABEL</li>
+        <li>Lenght:</li>
+        <li><input type="number" id="carton_label_lenght" /></li>
+        <li>Width:</li>
+        <li><input type="number" id="carton_label_width" /></li>
+        <li>Height:</li>
+        <li><input type="number" id="carton_label_height" /></li>
+        <li>Lenght:</li>
+        <li><input type="number" id="carton_measurements_lenght" /></li>
+        <li>Width:</li>
+        <li><input type="number" id="carton_measurements_width" /></li>
+        <li>Height:</li>
+        <li><input type="number" id="carton_measurements_height" /></li>
+      </ul>
+    </div>
+  </main>
+  <script src="main.js"></script>
+</body>
+
+</html>
