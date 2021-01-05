@@ -17,7 +17,7 @@
 
     <div>
       <h2>Weight Tolerances</h2>
-      <ul class="grid">
+      <ul class="grid tolerances">
         <li class="tolerances1">Weight</li>
         <li class="tolerances2">Tolerance</li>
         <li class="tolerances3">Minimum variation before creating a notification</li>
@@ -40,10 +40,20 @@
     </div>
 
     <div class="carton-data">
-      <h2>Carton Data</h2>
-      <ul class="grid">
-        <li>Colli GW<input type="text" id="carton_gw" label="carton_gw" /></li>
-        <li>SAP GW<input type="text" id="inspection_gw" label="inspection_gw" /></li>
+      <h2>SAP Data</h2>
+      <ul class="grid sap-data">
+        <li>
+          <span>ST GW</span>
+          <input type="text" id="car_gw" label="car_gw" class="input-field" /></li>
+        <li>ST NW<input type="text" id="inspection_gw" label="inspection_gw" /></li>
+        <li>ST WIDTH <input type="text" id="car_gw" label="car_gw" class="input-field" /></li>
+        <li>ST LENGHT<input type="text" id="inspection_gw" label="inspection_gw" class="input-field" /></li>
+        <li>ST HEIGHT<input type="text" id="inspection_gw" label="inspection_gw" class="input-field" /></li>
+        
+        <li>CAR GW <input type="text" id="car_gw" label="car_gw" /></li>
+        <li>ST WIDTH <input type="text" id="car_gw" label="car_gw" /></li>
+        <li>ST LENGHT<input type="text" id="inspection_gw" label="inspection_gw" /></li>
+        <li>ST HEIGHT<input type="text" id="inspection_gw" label="inspection_gw" /></li>
         <li>Colli Size<select id="colli_size" label="colli_size">
           <option>Select</option> 
           <option>1</option> 
