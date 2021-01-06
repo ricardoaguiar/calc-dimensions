@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
   <title>Packaging Master Data Corrections</title>
-  </head>
+</head>
 
 <body>
   <main>
@@ -40,57 +40,69 @@
     </div>
 
     <div class="carton-data">
-      <h2>SAP Data</h2>
-      <ul class="grid sap-data">
-        <li>
-          <span>ST GW</span>
-          <input type="text" id="car_gw" label="car_gw" class="input-field" />
-        </li>
-        <li>
-          <span>ST NW</span>
-          <input type="text" id="inspection_gw" label="inspection_gw" /></li>
-        <li>ST WIDTH <input type="text" id="car_gw" label="car_gw" class="input-field" /></li>
-        <li>ST LENGHT<input type="text" id="inspection_gw" label="inspection_gw" class="input-field" /></li>
-        <li>ST HEIGHT<input type="text" id="inspection_gw" label="inspection_gw" class="input-field" /></li>
-        
-        <li>CAR GW <input type="text" id="car_gw" label="car_gw" /></li>
-        <li>ST WIDTH <input type="text" id="car_gw" label="car_gw" /></li>
-        <li>ST LENGHT<input type="text" id="inspection_gw" label="inspection_gw" /></li>
-        <li>ST HEIGHT<input type="text" id="inspection_gw" label="inspection_gw" /></li>
-        <li>Colli Size<select id="colli_size" label="colli_size">
-          <option>Select</option> 
-          <option>1</option> 
-          <option>2</option> 
-          <option>3</option> 
-          <option>4</option> 
-          <option>5</option> 
-          <option>6</option> 
-          <option>7</option> 
-          <option>8</option> 
-          <option>9</option> 
-          <option>10</option> 
-          <option>12</option> 
-          <option>15</option> 
-        </select></li>
-        <li>Variation %<input type="text" id="verified_gw" label="verified_gw" /></li>
-        <li>Label Difference <span id="label_diff"></span></li>
-        <li>2% Above: <span id="upperWeightLimit"></span></li>
-        <li>2% Below: <span id="lowerWeightLimit"></span></li>
-        <li class="checkWeight">
-          <button id="checkGW" onclick="calcPercentage()">Check Weight</button>
-        </li>
-      </ul>
-      <h2 class="weight-range">WEIGHT RANGE IN KG</h2>
-</div>
+      <h2>CHECK MD</h2>
 
-<div>
-      <ul class="dimensions">
+
+      <div class="sap_data">
+        <h3>ST LINE</h3>
+        <ul>
+          <li class="flex">
+            <span>ST GW</span>
+            <input type="text" id="car_gw" label="car_gw"/>
+          </li>
+          <li class="flex">
+            <span>ST NW</span>
+            <input type="text" id="inspection_gw"/>
+          </li>
+        </ul>
+        <ul>
+          <li class="flex"><span>ST LENGTH</span><input type="text" id="inspection_gw" label="inspection_gw"/></li>
+          <li class="flex"><span>ST WIDTH</span><input type="text" id="car_gw" label="car_gw"></li>
+          <li class="flex"><span>ST HEIGHT</span><input type="text" id="inspection_gw" label="inspection_gw"/></li>
+        </ul>
+      </div>
+      <div class="sap_data">
+        <h3>CAR LINE</h3>
+        <ul>
+          <li class="flex"><span>CAR GW</span><input type="text" id="car_gw" label="car_gw" /></li>
+          <li class="flex"><span>CAR WIDTH</span><input type="text" id="car_gw" label="car_gw" /></li>
+          <li class="flex"><span>CAR LENGTH</span><input type="text" id="inspection_gw" label="inspection_gw" /></li>
+          <li class="flex"><span>CAR HEIGHT</span><input type="text" id="inspection_gw" label="inspection_gw" /></li>
+        </ul>
+      </div>
+        
+  
+        <ul>
+          <li class="flex">
+            <select id="colli_size" label="colli_size" class="select-css">
+              <option default value>Select Colli Size</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+              <option>12</option>
+              <option>15</option>
+            </select></li>
+          <li class="flex">
+            <button id="checkGW" onclick="calcPercentage()">Check Weight</button>
+          </li>
+        </ul>
+        
+    <div>
+      <h2 class="weight-range">WEIGHT RANGE IN KG</h2>
+      <ul>
         <li>DIMENSIONS</li>
-        <li class="item-0">Measurements</li>
-        <li class="item-2">Lenght:</li>
-        <li class="item-3">Width:</li>
-        <li class="item-4">Height:</li>
-        <li class="item-1">SAP</li>
+        <li class="flex">Measurements</li>
+        <li class="flex">Lenght:</li>
+        <li class="flex">Width:</li>
+        <li class="flex">Height:</li>
+        <li class="flex">SAP</li>
         <li><input type="number" id="sap_lenght" /></li>
         <li><input type="number" id="sap_width" /></li>
         <li><input type="number" id="sap_height" /></li>

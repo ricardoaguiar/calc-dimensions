@@ -1,4 +1,4 @@
-* {
+  * {
   box-sizing: border-box;
   font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -81,7 +81,10 @@ li {
   font-weight: 600;
   background: rgb(52, 139, 219, 0.5);
 } */
-
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
 .grid {
   display: grid;
   grid-gap: 8px;
@@ -102,7 +105,8 @@ li {
 }
 
 .sap-data {
-  grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+  /* grid-template-columns: repeat(auto-fill, minmax(25%, 1fr)); */
+  flex: 1;
 }
 .sap-data li {
   display: flex;
@@ -124,7 +128,7 @@ li {
   border-top-right-radius: 2px;
   border: 1px solid rgba(0, 0, 0, 0.25);
   border-left: 0;
-  height: 100%;
+
   }
 
 .dimensions {

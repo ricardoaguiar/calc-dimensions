@@ -51,7 +51,11 @@ h1 {
   margin-bottom: 1.5em;
 }
 h2 {
-  font-size: medium;
+  font-size: 1.5rem;
+}
+
+h3{
+  font-size: 1rem;
 }
 
 input {
@@ -76,13 +80,6 @@ li {
   padding: 5px;
 }
 
-/* li:first-of-type {
-  flex: 1 0 100%;
-  text-align: center;
-  font-weight: 600;
-  background: rgb(52, 139, 219, 0.5);
-} */
-
 .grid {
   display: grid;
   grid-gap: 8px;
@@ -97,26 +94,40 @@ li {
   grid-auto-rows: repeat(auto-fill, 1fr);
   grid-template-columns: 1fr 1fr 1fr;
 }
+
 .tolerances li {
   border: 1px solid rgba(0, 0, 0, 0.09);
 }
 
-.sap-data {
-  grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
-}
-.sap-data li {
+.flex {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  flex: 1;
 }
-.sap-data span {
+
+.half {
+  flex: 1;
+  justify-content: space-between;
+}
+
+.sap_data {
+  background-color: rgba(222, 222, 222, 0.55);
+  padding: .2em .1em;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+ul li span {
   background-color: rgba(204, 204, 204, 0.5);
   padding: .5em .75em;
   border: 1px solid rgba(0, 0, 0, 0.25);
   border-bottom-left-radius: 2px;
   border-top-left-radius: 2px;
   border-right: 0;
+  white-space: nowrap;
 }
-.input-field {
+ul li input {
   flex: 1;
   padding: .5em .75em;
   border: 1px solid rgba(147, 128, 108, .25);
@@ -125,7 +136,19 @@ li {
   border: 1px solid rgba(0, 0, 0, 0.25);
   border-left: 0;
   height: 100%;
+  font-size: .85rem;
   }
+
+.select-css {
+   width: 100%;
+  padding: .5rem 1rem .5rem .6rem;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  font-size: .9rem;
+  line-height: 1.2; 
+ }
+
+
 
 .dimensions {
   display: flex;
@@ -149,14 +172,17 @@ li {
 }
 
 button {
+  flex: 1;
   font-size: 14;
   font-weight: 700;
-  margin: .5em auto;
   border-radius: 3px;
   border-collapse: collapse;
-  border: 1px solid grey;
-  height: 25px;
+  border: 1px solid rgb(47, 121, 250);
+  background-color: rgba(218, 218, 218, 0.283);
+  height: 100%;
   cursor: pointer;
+  text-transform: uppercase;
+  color: rgb(47, 121, 250);
 }
 
 .checkWeight {
