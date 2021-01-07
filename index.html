@@ -38,92 +38,121 @@
         <li class="tolerances18">1500g</li>
       </ul>
     </div>
-
-    <div class="carton-data">
-      <h2>CHECK MD</h2>
-
-
-      <div class="sap_data">
-        <h3>ST LINE</h3>
-        <ul>
-          <li class="flex">
-            <span>ST GW</span>
-            <input type="text" id="car_gw" label="car_gw"/>
-          </li>
-          <li class="flex">
-            <span>ST NW</span>
-            <input type="text" id="inspection_gw"/>
-          </li>
-        </ul>
-        <ul>
-          <li class="flex"><span>ST LENGTH</span><input type="text" id="inspection_gw" label="inspection_gw"/></li>
-          <li class="flex"><span>ST WIDTH</span><input type="text" id="car_gw" label="car_gw"></li>
-          <li class="flex"><span>ST HEIGHT</span><input type="text" id="inspection_gw" label="inspection_gw"/></li>
-        </ul>
-      </div>
-      <div class="sap_data">
-        <h3>CAR LINE</h3>
-        <ul>
-          <li class="flex"><span>CAR GW</span><input type="text" id="car_gw" label="car_gw" /></li>
-          <li class="flex"><span>CAR WIDTH</span><input type="text" id="car_gw" label="car_gw" /></li>
-          <li class="flex"><span>CAR LENGTH</span><input type="text" id="inspection_gw" label="inspection_gw" /></li>
-          <li class="flex"><span>CAR HEIGHT</span><input type="text" id="inspection_gw" label="inspection_gw" /></li>
-        </ul>
-      </div>
-        
-  
-        <ul>
-          <li class="flex">
-            <select id="colli_size" label="colli_size" class="select-css">
-              <option default value>Select Colli Size</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-              <option>6</option>
-              <option>7</option>
-              <option>8</option>
-              <option>9</option>
-              <option>10</option>
-              <option>12</option>
-              <option>15</option>
-            </select></li>
-          <li class="flex">
-            <button id="checkGW" onclick="calcPercentage()">Check Weight</button>
-          </li>
-        </ul>
-        
-    <div>
-      <h2 class="weight-range">WEIGHT RANGE IN KG</h2>
+    
+    <h2>CHECK MD</h2>
+    <span class="displayCllSizes" name="ckColliSize"></span>
+    <div class="flex">
       <ul>
-        <li>DIMENSIONS</li>
-        <li class="flex">Measurements</li>
-        <li class="flex">Lenght:</li>
-        <li class="flex">Width:</li>
-        <li class="flex">Height:</li>
-        <li class="flex">SAP</li>
-        <li><input type="number" id="sap_lenght" /></li>
-        <li><input type="number" id="sap_width" /></li>
-        <li><input type="number" id="sap_height" /></li>
-        <li class="item-5">CARTON</li>
-        <li>CARTON LABEL</li>
-        <li>Lenght:</li>
-        <li><input type="number" id="carton_label_lenght" /></li>
-        <li>Width:</li>
-        <li><input type="number" id="carton_label_width" /></li>
-        <li>Height:</li>
-        <li><input type="number" id="carton_label_height" /></li>
-        <li>Lenght:</li>
-        <li><input type="number" id="carton_measurements_lenght" /></li>
-        <li>Width:</li>
-        <li><input type="number" id="carton_measurements_width" /></li>
-        <li>Height:</li>
-        <li><input type="number" id="carton_measurements_height" /></li>
-      </ul>
-    </div>
+        <li class="flex">
+          <select id="cllSize" label="colli_size" class="select_cl_size">
+            <option default value="">Select Colli Size</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="12">12</option>
+            <option value="15">15</option>
+          </select>
+          </li>
+        </ul>
+      </div>
+
+    <div class="flex">
+      <div class="sap_data">
+          <h3>ST LINE</h3>
+          <ul>
+            <!-- <li class="flex"><span>ST GW</span><input type="text" id="st_gw" label="st_gw" /></li> -->
+            <li class="flex"><span>ST NW</span><input type="text" id="st_nw" /></li>
+            <li class="flex"><span>ST LENGTH</span><input type="text" id="st_lenght" /></li>
+            <li class="flex"><span>ST WIDTH</span><input type="text" id="st_width" ></li>
+            <li class="flex"><span>ST HEIGHT</span><input type="text" id="st_height" /></li>
+          </ul>
+        </div>
+        
+        <div class="sap_data sap_data_verified">
+          <h3>ST DATA</h3>
+          <ul>
+            <li class="flex"><span id="st_gw" class="result"></span></li>
+            <!-- <li class="flex"><input disabled="disabled" type="text" id="st_gw_verified" class="verified"  placeholder="CAR GW / COLLI SIZE - READ ONLY"/></li> -->
+            <li class="flex"><input type="text" id="inspection_gw" class="verified" /></li>
+            <li class="flex"><input type="text" id="inspection_gw" label="inspection_gw" class="verified" /></li>
+            <li class="flex"><input type="text" id="car_gw" label="car_gw" class="verified"></li>
+            <li class="flex"><input type="text" id="inspection_gw" label="inspection_gw" class="verified" /></li>
+            <!-- <li class="flex"><span>ST GW</span><input type="text" id="car_gw" label="car_gw" readonly/></li>
+            <li class="flex"><span>ST NW</span><input type="text" id="inspection_gw" /></li>
+            <li class="flex"><span>ST LENGTH</span><input type="text" id="inspection_gw" label="inspection_gw" /></li>
+            <li class="flex"><span>ST WIDTH</span><input type="text" id="car_gw" label="car_gw"></li>
+            <li class="flex"><span>ST HEIGHT</span><input type="text" id="inspection_gw" label="inspection_gw" /></li> -->
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="flex">
+        <div class="sap_data">
+          <h3>CAR LINE</h3>
+          <ul>
+            <li class="flex"><span>CAR GW</span><input type="text" id="car_gw" /></li>
+            <li class="flex"><span>CAR WIDTH</span><input type="text" id="car_w"  /></li>
+            <li class="flex"><span>CAR LENGTH</span><input type="text" id="car_l" /></li>
+            <li class="flex"><span>CAR HEIGHT</span><input type="text" id="car_h" /></li>
+          </ul>
+        </div>
+
+        <div class="sap_data sap_data_verified">
+          <h3>COLLI DATA</h3>
+          <ul>
+            <li class="flex"><input class="verified colli_gw" type="text" id="colli_gw" /></li>
+            <li class="flex"><input class="verified" type="text" id="colli_w" /></li>
+            <li class="flex"><input class="verified" type="text" id="colli_l" /></li>
+            <li class="flex"><input class="verified" type="text" id="colli_h" /></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex">
+        <button id="checkGW" onclick="calcPercentage()" class="button">CLEAR DATA</button>
+      </div>
+
+
+
+
+      <!-- <div>
+        <h2 class="weight-range">WEIGHT RANGE IN KG</h2>
+        <ul>
+          <li>DIMENSIONS</li>
+          <li class="flex">Measurements</li>
+          <li class="flex">Lenght:</li>
+          <li class="flex">Width:</li>
+          <li class="flex">Height:</li>
+          <li class="flex">SAP</li>
+          <li class="flex"><input type="number" id="sap_lenght" /></li>
+          <li class="flex"><input type="number" id="sap_width" /></li>
+          <li class="flex"><input type="number" id="sap_height" /></li>
+          <li class="flex">CARTON</li>
+          <li class="flex">CARTON LABEL</li>
+          <li class="flex">Lenght:</li>
+          <li class="flex"><input type="number" id="carton_label_lenght" /></li>
+          <li class="flex">Width:</li>
+          <li class="flex"><input type="number" id="carton_label_width" /></li>
+          <li class="flex">Height:</li>
+          <li class="flex"><input type="number" id="carton_label_height" /></li>
+          <li class="flex">Lenght:</li>
+          <li class="flex"><input type="number" id="carton_measurements_lenght" /></li>
+          <li class="flex">Width:</li>
+          <li class="flex"><input type="number" id="carton_measurements_width" /></li>
+          <li class="flex">Height:</li>
+          <li class="flex"><input type="number" id="carton_measurements_height" /></li>
+        </ul>
+      </div> -->
   </main>
-  <script src="main.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

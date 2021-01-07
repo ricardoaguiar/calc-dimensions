@@ -9,6 +9,7 @@
 body {
   max-width: 1000px;
   margin: 0 auto;
+  padding-bottom: 5vh;
 }
 
 main {
@@ -33,11 +34,13 @@ section {
 }
 
 header {
-  /* display: flex; */
-  /* min-width: 100%; */
+  display: flex;
   background: rgba(57, 119, 189, 0.1);
   flex: 1 0 auto;
   margin-bottom: 5px;
+  height: 10vh;
+  justify-content: center;
+  align-items: center;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -90,6 +93,21 @@ li {
   margin-bottom: 2rem;
 }
 
+
+
+.button {
+  padding: 1rem;
+  max-width: fit-content;
+  margin: 1rem;
+  font-size:1rem;
+}
+.button:hover {
+  background-color: rgb(47, 121, 250);
+  color: white;
+
+}
+
+
 .tolerances {
   grid-auto-rows: repeat(auto-fill, 1fr);
   grid-template-columns: 1fr 1fr 1fr;
@@ -101,21 +119,25 @@ li {
 
 .flex {
   display: flex;
-  justify-content: space-between;
-  flex: 1;
+  flex: 0 0 100%;
 }
 
 .half {
-  flex: 1;
+  flex: 0 0 50%;
   justify-content: space-between;
 }
 
 .sap_data {
   background-color: rgba(222, 222, 222, 0.55);
   padding: .2em .1em;
-  margin-bottom: 1rem;
+  margin: .2rem;
   border: 1px solid #ccc;
   border-radius: 4px;
+}
+
+.sap_data_verified {
+  background-color:rgba(57, 119, 189, 0.1);
+  flex: 0 0 30%;
 }
 
 ul li span {
@@ -124,22 +146,51 @@ ul li span {
   border: 1px solid rgba(0, 0, 0, 0.25);
   border-bottom-left-radius: 2px;
   border-top-left-radius: 2px;
-  border-right: 0;
   white-space: nowrap;
+  width: 6.5rem;
 }
 ul li input {
   flex: 1;
   padding: .5em .75em;
-  border: 1px solid rgba(147, 128, 108, .25);
   border-bottom-right-radius: 2px;
   border-top-right-radius: 2px;
   border: 1px solid rgba(0, 0, 0, 0.25);
-  border-left: 0;
+  border-left: none;
   height: 100%;
   font-size: .85rem;
   }
 
-.select-css {
+  input:disabled {
+    background: rgb(47, 121, 250);
+    color: white;
+    font-weight: bolder;
+  }
+  input::placeholder {
+    color: #fff;
+  }
+  ::-webkit-input-placeholder {  /* Chrome/Opera/Safari */
+    color: #fff;
+  }
+  ::-moz-placeholder {  /* Firefox 19+ */
+    color: #fff;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: #fff;
+  }
+  :-ms-input-placeholder {  /* Edge/IE 10+ */
+    color: #fff;
+  }
+  .verified {
+    padding: .5em .75em;
+    height: 2rem;
+    border: 1px solid rgba(41, 119, 215, 0.75);
+    border-radius: 3px;
+  }
+  .verified:focus {
+    background-color: rgba(41, 119, 215, 0.01)
+  }
+
+.select_cl_size {
    width: 100%;
   padding: .5rem 1rem .5rem .6rem;
   border-radius: 3px;
@@ -147,7 +198,6 @@ ul li input {
   font-size: .9rem;
   line-height: 1.2; 
  }
-
 
 
 .dimensions {
@@ -189,3 +239,14 @@ button {
   width: 100%
 }
 
+.ckColliSize{
+  display: inline-block;
+  font-size: 2rem;
+}
+.result {
+  background-color: white;
+  color: rgb(47, 121, 250);
+  height: 2rem;
+  flex: 1;
+  font-weight: bold;
+}
