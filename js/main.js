@@ -8,11 +8,10 @@ colliGrossWeight.addEventListener('change', calcStWeight)
 
 
 
-function calcStWeight(e) {
+function calcStWeight() {
   const clSize = cllSize.selectedOptions[0].value
-  const calcWeight = colliGrossWeight + clSize;
-  console.log('cw',calcWeight)
-  artGrossWeight.textContent = e.target.value;
+  const resGW = (colliGrossWeight.value / clSize).toFixed(3);
+  artGrossWeight.textContent = resGW + "g";
 
 
 }
