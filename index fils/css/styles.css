@@ -1,0 +1,252 @@
+/* */
+* {
+  box-sizing: border-box;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  /* outline: 1px solid red; */
+}
+
+body {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 5vh;
+}
+
+main {
+  margin: 0 auto;
+  display: flex;
+  font-size: 4em;
+  flex-flow: column wrap;
+  max-width: 80vw;
+  /* border-left: 1px solid rgba(0, 0, 0, 0.09);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+  border-right: 1px solid rgba(0, 0, 0, 0.09); */
+
+}
+
+section {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.gw {
+  min-height: 40vh;
+}
+
+header {
+  display: flex;
+  background: rgba(57, 119, 189, 0.1);
+  flex: 1 0 auto;
+  margin-bottom: 5px;
+  height: 10vh;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  text-transform: capitalize;
+  text-align: center;
+}
+
+h1 {
+  font-size: large;
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+h2 {
+  font-size: 1.5rem;
+}
+
+h3{
+  font-size: 1rem;
+}
+
+input {
+  /* border-radius: 3px;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  margin-left: 2px;
+  max-width: 70px; */
+}
+
+ul {
+  display: flex;
+  flex-flow: row wrap;
+  font-size: 14px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+.grid {
+  display: grid;
+  grid-gap: 8px;
+  text-align: center;
+  overflow-wrap: break-word;
+  word-break: normal;
+  white-space: wrap;
+  margin-bottom: 2rem;
+}
+
+
+
+.button {
+  padding: 1rem;
+  max-width: fit-content;
+  margin: 1rem;
+  font-size:1rem;
+}
+.button:hover {
+  background-color: rgb(47, 121, 250);
+  color: white;
+
+}
+
+
+.tolerances {
+  grid-auto-rows: repeat(auto-fill, 1fr);
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.tolerances li {
+  border: 1px solid rgba(0, 0, 0, 0.09);
+}
+
+.flex {
+  display: flex;
+  flex: 0 0 100%;
+}
+
+.half {
+  flex: 0 0 50%;
+  justify-content: space-between;
+}
+
+.sap_data {
+  background-color: rgba(222, 222, 222, 0.55);
+  padding: .2em .1em;
+  margin: .2rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.sap_data_verified {
+  background-color:rgba(57, 119, 189, 0.1);
+  flex: 0 0 30%;
+}
+
+ul li span {
+  background-color: rgba(204, 204, 204, 0.5);
+  padding: .5em .75em;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+  white-space: nowrap;
+  width: 6.5rem;
+}
+ul li input {
+  flex: 1;
+  padding: .5em .75em;
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-left: none;
+  height: 100%;
+  font-size: .85rem;
+  }
+
+  input:disabled {
+    background: rgb(47, 121, 250);
+    color: white;
+    font-weight: bolder;
+  }
+  input::placeholder {
+    color: #fff;
+  }
+  ::-webkit-input-placeholder {  /* Chrome/Opera/Safari */
+    color: #fff;
+  }
+  ::-moz-placeholder {  /* Firefox 19+ */
+    color: #fff;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: #fff;
+  }
+  :-ms-input-placeholder {  /* Edge/IE 10+ */
+    color: #fff;
+  }
+  .verified {
+    padding: .5em .75em;
+    height: 2rem;
+    border: 1px solid rgba(41, 119, 215, 0.75);
+    border-radius: 3px;
+  }
+  .verified:focus {
+    background-color: rgba(41, 119, 215, 0.01)
+  }
+
+.select_cl_size {
+   width: 100%;
+  padding: .5rem 1rem .5rem .6rem;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  font-size: .9rem;
+  line-height: 1.2; 
+ }
+
+
+.dimensions {
+  display: flex;
+  flex-flow: row wrap;
+  min-width: 100%;
+}
+
+.dimensions li:first-of-type {
+  order: 0;
+  min-width: 100%;
+}
+
+.dimensions li {
+  flex: 1 0 20%;
+}
+
+.weight-range {
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+}
+
+button {
+  flex: 1;
+  font-size: 14;
+  font-weight: 700;
+  border-radius: 3px;
+  border-collapse: collapse;
+  border: 1px solid rgb(47, 121, 250);
+  background-color: rgba(218, 218, 218, 0.283);
+  height: 100%;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: rgb(47, 121, 250);
+}
+
+.checkWeight {
+  width: 100%
+}
+
+.ckColliSize{
+  display: inline-block;
+  font-size: 2rem;
+}
+.result {
+  background-color: white;
+  color: rgb(47, 121, 250);
+  height: 2rem;
+  flex: 1;
+  font-weight: bold;
+}
