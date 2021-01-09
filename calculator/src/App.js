@@ -5,11 +5,19 @@ function App() {
 
   const [colliSize, setColliSize] = useState(1); //start with 1 article per colli
   const [masterDataColliGrossWeight, setMasterDataColliGrossWeight] = useState(0); //start with 2 articles per master data(0); //get the MD cll gw
+  const [masterDataArticleGrossWeight, setMasterDataArticleGrossWeight] = useState(0);
 
-console.log(colliSize, masterDataColliGrossWeight);
+  const stGWData = (Number(masterDataColliGrossWeight) / colliSize).toFixed(3);
 
-  
-  
+  const articleGrossWeightVariation = (Number(masterDataArticleGrossWeight - stGWData).toFixed(3));
+
+
+  console.log({
+    "colliSize": colliSize,
+    "masterDataColliGrossWeight": masterDataColliGrossWeight,
+  });
+
+
   return (
   <main>
     <header>
@@ -67,7 +75,7 @@ console.log(colliSize, masterDataColliGrossWeight);
       <div className="sap_data">
           <h3>ST Master Data</h3>
           <ul>
-            <li className="flex"><span>ST GW</span><input type="text" label="st_gw" /></li>
+            <li className="flex"><span>ST GW</span><input type="text" value={`${masterDataArticleGrossWeight}`} onChange={(e)=>setMasterDataArticleGrossWeight(e.target.value)}/><span>kg</span></li>
             <li className="flex"><span>ST NW</span><input type="text" /></li>
             <li className="flex"><span>ST LENGTH</span><input type="text" /></li>
             <li className="flex"><span>ST WIDTH</span><input type="text" /></li>
@@ -79,17 +87,22 @@ console.log(colliSize, masterDataColliGrossWeight);
           <h3>ST DATA</h3>
           <ul>
             {/* <li className="flex"><span className="result"></span></li> */}
-            <li className="flex"><input readOnly type="text" className="verified" placeholder="CAR GW / COLLI SIZE - READ ONLY" value={`${(Number(masterDataColliGrossWeight) / colliSize).toFixed(3) } kg`}/></li>
+            <li className="flex"><input readOnly type="text" className="verified" value={`${(Number(masterDataColliGrossWeight) / colliSize).toFixed(3) }`}/></li>
             <li className="flex"><input type="text" className="verified" /></li>
-            <li className="flex"><input type="text" label="inspection_gw" className="verified" /></li>
-            <li className="flex"><input type="text" label="car_gw" className="verified" /></li>
-            <li className="flex"><input type="text" label="inspection_gw" className="verified" /></li>
-            {/* <li className="flex"><span>ST GW</span><input type="text" label="car_gw" readonly/></li>
-            <li className="flex"><span>ST NW</span><input type="text" /></li>
-            <li className="flex"><span>ST LENGTH</span><input type="text" label="inspection_gw" /></li>
-            <li className="flex"><span>ST WIDTH</span><input type="text" label="car_gw" /></li>
-            <li className="flex"><span>ST HEIGHT</span><input type="text" label="inspection_gw" /></li> */}
+            <li className="flex"><input type="text"  className="verified" /></li>
+            <li className="flex"><input type="text"  className="verified" /></li>
+            <li className="flex"><input type="text"  className="verified" /></li>
           </ul>
+        </div>
+        <div className="sap_data sap_data_verified">
+          <h3>ST VARIATION</h3>
+            <ul>
+              <li className="flex"><span>ST GW VAR</span><input type="text"  readOnly value={`${articleGrossWeightVariation}`} /><span>kg</span></li>
+              <li className="flex"><span>ST NW</span><input type="text" /></li>
+              <li className="flex"><span>ST LENGTH</span><input type="text"  /></li>
+              <li className="flex"><span>ST WIDTH</span><input type="text"  /></li>
+              <li className="flex"><span>ST HEIGHT</span><input type="text"  /></li>
+            </ul>
         </div>
       </div>
 
