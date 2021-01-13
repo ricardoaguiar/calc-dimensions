@@ -2,7 +2,6 @@ import './App.css';
 import { useState } from 'react';
 
 function App() {
-
   const [colliSize, setColliSize] = useState(1); //start with 1 article per colli
   const [masterDataColliGrossWeight, setMasterDataColliGrossWeight] = useState(0); //start with 2 articles per master data(0); //get the MD cll gw
   const [masterDataArticleGrossWeight, setMasterDataArticleGrossWeight] = useState(0);
@@ -75,7 +74,7 @@ function App() {
         <div className="sap_data">
           <h3>ST Master Data</h3>
           <ul>
-            <li className="flex"><span>ST GW</span><input type="text" value={`${masterDataArticleGrossWeight}`} onChange={(e) => setMasterDataArticleGrossWeight(e.target.value)} /><span>kg</span></li>
+            <li className="flex"><span>ST GW</span><input type="text" value={`${masterDataArticleGrossWeight}`} onChange={(e) => setMasterDataArticleGrossWeight(e.target.value)} /><span className="append">kg</span></li>
             <li className="flex"><span>ST NW</span><input type="text" /></li>
             <li className="flex"><span>ST LENGTH</span><input type="text" /></li>
             <li className="flex"><span>ST WIDTH</span><input type="text" /></li>
