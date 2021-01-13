@@ -83,9 +83,9 @@ function App() {
             <li className="flex"><span>ST LENGTH</span><input type="text" />
             <span className="append">cm</span></li>
             <li className="flex"><span>ST WIDTH</span><input type="text" />
-span className="append">cm</span></li>
+            <span className="append">cm</span></li>
             <li className="flex"><span>ST HEIGHT</span><input type="text" />
-span className="append">cm</span></li>
+            <span className="append">cm</span></li>
           </ul>
         </div>
 
@@ -132,7 +132,8 @@ span className="append">cm</span></li>
             <li className="flex">
             <input className="verified colli_gw" type="text" value={`${masterDataColliGrossWeight}`} onChange={(e) => setMasterDataColliGrossWeight(e.target.value)} />
             <span className="append">kg</span></li>
-            <li className="flex"><input className="verified" type="text" /></li>
+            <li className="flex"><input className="verified" type="text" />
+            <span className="append">kg</span></li>
             <li className="flex"><input className="verified" type="text" /></li>
             <li className="flex"><input className="verified" type="text" /></li>
           </ul>
