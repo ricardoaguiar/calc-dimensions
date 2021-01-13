@@ -5,7 +5,8 @@ function App() {
   const [colliSize, setColliSize] = useState(1); //start with 1 article per colli
   const [masterDataColliGrossWeight, setMasterDataColliGrossWeight] = useState(0); //start with 2 articles per master data(0); //get the MD cll gw
   const [masterDataArticleGrossWeight, setMasterDataArticleGrossWeight] = useState(0);
-
+  const [masterDataArticleNetWeight, setMasterDataArticleNetWeight] = useState(0);
+  
   const stGWData = (Number(masterDataColliGrossWeight) / colliSize).toFixed(3);
   
   const articleGrossWeightVariation = (Number(masterDataArticleGrossWeight - stGWData).toFixed(3));
@@ -78,7 +79,7 @@ function App() {
               <span>ST GW</span>
               <input type="text" className="input_center" value={`${masterDataArticleGrossWeight}`} onChange={(e) => setMasterDataArticleGrossWeight(e.target.value)} />
               <span className="append">kg</span></li>
-            <li className="flex"><span>ST NW</span><input type="text" className="input_center" />
+            <li className="flex"><span>ST NW</span><input type="text" className="input_center" value={`${masterDataArticleNetWeight}`} onChange={(e) => setMasterDataArticleNetWeight(e.target.value)} />
             <span className="append">kg</span></li>
             <li className="flex"><span>ST LENGTH</span><input type="text" className="input_center" />
             <span className="append">cm</span></li>
