@@ -268,7 +268,8 @@ margin: 1rem auto;
   border-bottom-left-radius: 0;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
-  max-width: max-content;
+  width: 2.8rem;
+  text-align: center;
 }
 .input_center {
     border-top-right-radius: 0;
