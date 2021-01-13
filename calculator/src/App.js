@@ -78,13 +78,13 @@ function App() {
               <span>ST GW</span>
               <input type="text" className="input_center" value={`${masterDataArticleGrossWeight}`} onChange={(e) => setMasterDataArticleGrossWeight(e.target.value)} />
               <span className="append">kg</span></li>
-            <li className="flex"><span>ST NW</span><input type="text" />
+            <li className="flex"><span>ST NW</span><input type="text" className="input_center" />
             <span className="append">kg</span></li>
-            <li className="flex"><span>ST LENGTH</span><input type="text" />
+            <li className="flex"><span>ST LENGTH</span><input type="text" className="input_center" />
             <span className="append">cm</span></li>
-            <li className="flex"><span>ST WIDTH</span><input type="text" />
+            <li className="flex"><span>ST WIDTH</span><input type="text" className="input_center" />
             <span className="append">cm</span></li>
-            <li className="flex"><span>ST HEIGHT</span><input type="text" />
+            <li className="flex"><span>ST HEIGHT</span><input type="text" className="input_center" />
             <span className="append">cm</span></li>
           </ul>
         </div>
@@ -105,11 +105,11 @@ function App() {
           <ul>
             <li className="flex"><span>ST GW VAR</span><input type="text" readOnly value={`${articleGrossWeightVariation}`} />
             <span className="append">kg</span></li>
-            <li className="flex"><span>ST NW</span><input type="text" />
+            <li className="flex"><span>ST NW</span><input type="text" className="input_center" />
             <span className="append">kg</span></li>
-            <li className="flex"><span>ST LENGTH</span><input type="text" /></li>
-            <li className="flex"><span>ST WIDTH</span><input type="text" /></li>
-            <li className="flex"><span>ST HEIGHT</span><input type="text" /></li>
+            <li className="flex"><span>ST LENGTH</span><input type="text" className="input_center" /></li>
+            <li className="flex"><span>ST WIDTH</span><input type="text" className="input_center" /></li>
+            <li className="flex"><span>ST HEIGHT</span><input type="text" className="input_center" /></li>
           </ul>
         </div>
       </div>
@@ -119,10 +119,10 @@ function App() {
         <div className="sap_data">
           <h3>Colli Master Data</h3>
           <ul>
-            <li className="flex"><span>CAR GW</span><input type="text" /></li>
-            <li className="flex"><span>CAR WIDTH</span><input type="text" /></li>
-            <li className="flex"><span>CAR LENGTH</span><input type="text" /></li>
-            <li className="flex"><span>CAR HEIGHT</span><input type="text" /></li>
+            <li className="flex"><span>CAR GW</span><input type="text" className="input_center" /></li>
+            <li className="flex"><span>CAR WIDTH</span><input type="text" className="input_center" /></li>
+            <li className="flex"><span>CAR LENGTH</span><input type="text" className="input_center" /></li>
+            <li className="flex"><span>CAR HEIGHT</span><input type="text" className="input_center" /></li>
           </ul>
         </div>
 
