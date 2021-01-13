@@ -8,6 +8,7 @@ function App() {
   const [masterDataArticleNetWeight, setMasterDataArticleNetWeight] = useState(0);
   
   const stGWData = (Number(masterDataColliGrossWeight) / colliSize).toFixed(3);
+  const stNWData = (Number(masterDataArticleNetWeight - stNWData).toFixed(3));
   
   const articleGrossWeightVariation = (Number(masterDataArticleGrossWeight - stGWData).toFixed(3));
   const articleNetWeightVariation = (Number(masterDataArticleNetWeight - stNWData).toFixed(3));
@@ -79,8 +80,12 @@ function App() {
               <span>ST GW</span>
               <input type="text" className="input_center" value={`${masterDataArticleGrossWeight}`} onChange={(e) => setMasterDataArticleGrossWeight(e.target.value)} />
               <span className="append">kg</span></li>
-            <li className="flex"><span>ST NW</span><input type="text" className="input_center" value={`${masterDataArticleNetWeight}`} onChange={(e) => setMasterDataArticleNetWeight(e.target.value)} />
+
+            <li className="flex">
+            <span>ST NW</span>
+             <input type="text" className="input_center" value={`${masterDataArticleNetWeight}`} onChange={(e) => setMasterDataArticleNetWeight(e.target.value)} />
             <span className="append">kg</span></li>
+
             <li className="flex"><span>ST LENGTH</span><input type="text" className="input_center" />
             <span className="append">cm</span></li>
             <li className="flex"><span>ST WIDTH</span><input type="text" className="input_center" />
