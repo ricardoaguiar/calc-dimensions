@@ -78,10 +78,14 @@ function App() {
               <span>ST GW</span>
               <input type="text" className="input_center" value={`${masterDataArticleGrossWeight}`} onChange={(e) => setMasterDataArticleGrossWeight(e.target.value)} />
               <span className="append">kg</span></li>
-            <li className="flex"><span>ST NW</span><input type="text" /></li>
-            <li className="flex"><span>ST LENGTH</span><input type="text" /></li>
-            <li className="flex"><span>ST WIDTH</span><input type="text" /></li>
-            <li className="flex"><span>ST HEIGHT</span><input type="text" /></li>
+            <li className="flex"><span>ST NW</span><input type="text" />
+            <span className="append">kg</span></li>
+            <li className="flex"><span>ST LENGTH</span><input type="text" />
+            <span className="append">cm</span></li>
+            <li className="flex"><span>ST WIDTH</span><input type="text" />
+span className="append">cm</span></li>
+            <li className="flex"><span>ST HEIGHT</span><input type="text" />
+span className="append">cm</span></li>
           </ul>
         </div>
 
@@ -99,8 +103,10 @@ function App() {
         <div className="sap_data sap_data_verified">
           <h3>ST VARIATION</h3>
           <ul>
-            <li className="flex"><span>ST GW VAR</span><input type="text" readOnly value={`${articleGrossWeightVariation}`} /><span>kg</span></li>
-            <li className="flex"><span>ST NW</span><input type="text" /></li>
+            <li className="flex"><span>ST GW VAR</span><input type="text" readOnly value={`${articleGrossWeightVariation}`} />
+            <span className="append">kg</span></li>
+            <li className="flex"><span>ST NW</span><input type="text" />
+            <span className="append">kg</span></li>
             <li className="flex"><span>ST LENGTH</span><input type="text" /></li>
             <li className="flex"><span>ST WIDTH</span><input type="text" /></li>
             <li className="flex"><span>ST HEIGHT</span><input type="text" /></li>
@@ -123,7 +129,9 @@ function App() {
         <div className="sap_data sap_data_verified">
           <h3>COLLI DATA</h3>
           <ul>
-            <li className="flex"><input className="verified colli_gw" type="text" value={`${masterDataColliGrossWeight}`} onChange={(e) => setMasterDataColliGrossWeight(e.target.value)} /><span>kg</span></li>
+            <li className="flex">
+            <input className="verified colli_gw" type="text" value={`${masterDataColliGrossWeight}`} onChange={(e) => setMasterDataColliGrossWeight(e.target.value)} />
+            <span className="append">kg</span></li>
             <li className="flex"><input className="verified" type="text" /></li>
             <li className="flex"><input className="verified" type="text" /></li>
             <li className="flex"><input className="verified" type="text" /></li>
