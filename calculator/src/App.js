@@ -8,10 +8,10 @@ function App() {
   const [masterDataArticleNetWeight, setMasterDataArticleNetWeight] = useState(0);
   
   const stGWData = (Number(masterDataColliGrossWeight) / colliSize).toFixed(3);
-  const stNWData = (Number(masterDataArticleNetWeight - stNWData).toFixed(3));
+
   
   const articleGrossWeightVariation = (Number(masterDataArticleGrossWeight - stGWData).toFixed(3));
-  const articleNetWeightVariation = (Number(masterDataArticleNetWeight - stNWData).toFixed(3));
+  
 
   console.log({
     "colliSize": colliSize,
@@ -100,7 +100,7 @@ function App() {
           <ul>
             {/* <li className="flex"><span className="result"></span></li> */}
             <li className="flex"><input readOnly type="text" className="verified" value={`${(Number(masterDataColliGrossWeight) / colliSize).toFixed(3)}`} /></li>
-            <li className="flex"><input type="text" className="verified" value={`${stNWData}`}/></li>
+            <li className="flex"><input type="text" className="verified" value={`${}`}/></li>
             <li className="flex"><input type="text" className="verified" /></li>
             <li className="flex"><input type="text" className="verified" /></li>
             <li className="flex"><input type="text" className="verified" /></li>
