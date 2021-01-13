@@ -6,11 +6,13 @@ function App() {
   const [masterDataColliGrossWeight, setMasterDataColliGrossWeight] = useState(0); //start with 2 articles per master data(0); //get the MD cll gw
   const [masterDataArticleGrossWeight, setMasterDataArticleGrossWeight] = useState(0);
   const [masterDataArticleNetWeight, setMasterDataArticleNetWeight] = useState(0);
+  const [articleNetWeight, setArticleNetWeight] = useState(0);
   
   const stGWData = (Number(masterDataColliGrossWeight) / colliSize).toFixed(3);
 
   
   const articleGrossWeightVariation = (Number(masterDataArticleGrossWeight - stGWData).toFixed(3));
+  const articleNetWeightVariation = (Number(masterDataArticleGrossWeight - articleNetWeight).toFixed(3));
   
 
   console.log({
@@ -100,7 +102,7 @@ function App() {
           <ul>
             {/* <li className="flex"><span className="result"></span></li> */}
             <li className="flex"><input readOnly type="text" className="verified" value={`${(Number(masterDataColliGrossWeight) / colliSize).toFixed(3)}`} /></li>
-            <li className="flex"><input type="text" className="verified" value={`${}`}/></li>
+            <li className="flex"><input type="text" className="verified" value={`${articleNetWeight}`}/></li>
             <li className="flex"><input type="text" className="verified" /></li>
             <li className="flex"><input type="text" className="verified" /></li>
             <li className="flex"><input type="text" className="verified" /></li>
