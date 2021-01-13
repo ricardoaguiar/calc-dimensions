@@ -270,3 +270,9 @@ margin: 1rem auto;
   border-bottom-right-radius: 3px;
   max-width: max-content;
 }
+.input_center {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 0;
+}
+}
