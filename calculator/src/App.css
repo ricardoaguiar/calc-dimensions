@@ -262,3 +262,6 @@ margin: 1rem auto;
   font-size: 1rem;
 
 }
+.append {
+  border-left: none;
+}
