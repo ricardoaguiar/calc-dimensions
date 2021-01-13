@@ -119,10 +119,14 @@ function App() {
         <div className="sap_data">
           <h3>Colli Master Data</h3>
           <ul>
-            <li className="flex"><span>CAR GW</span><input type="text" className="input_center" /></li>
-            <li className="flex"><span>CAR WIDTH</span><input type="text" className="input_center" /></li>
-            <li className="flex"><span>CAR LENGTH</span><input type="text" className="input_center" /></li>
-            <li className="flex"><span>CAR HEIGHT</span><input type="text" className="input_center" /></li>
+            <li className="flex"><span>CAR GW</span><input type="text" className="input_center" />
+          <span className="append">kg</span></li>
+            <li className="flex"><span>CAR WIDTH</span><input type="text" className="input_center" />
+            <span className="append">cm</span></li>
+            <li className="flex"><span>CAR LENGTH</span><input type="text" className="input_center" />
+            <span className="append">cm</span></li>
+            <li className="flex"><span>CAR HEIGHT</span><input type="text" className="input_center" />
+            <span className="append">cm</span></li>
           </ul>
         </div>
 
@@ -133,9 +137,11 @@ function App() {
             <input className="verified colli_gw" type="text" value={`${masterDataColliGrossWeight}`} onChange={(e) => setMasterDataColliGrossWeight(e.target.value)} />
             <span className="append">kg</span></li>
             <li className="flex"><input className="verified" type="text" />
-            <span className="append">kg</span></li>
-            <li className="flex"><input className="verified" type="text" /></li>
-            <li className="flex"><input className="verified" type="text" /></li>
+            <span className="append">cm</span></li>
+            <li className="flex"><input className="verified" type="text" />
+<span className="append">cm</span></li>
+            <li className="flex"><input className="verified" type="text" />
+<span className="append">cm</span></li>
           </ul>
         </div>
       </div>
