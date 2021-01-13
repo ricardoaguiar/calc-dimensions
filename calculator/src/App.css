@@ -264,4 +264,9 @@ margin: 1rem auto;
 }
 .append {
   border-left: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  max-width: max-content;
 }
