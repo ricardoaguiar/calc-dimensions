@@ -74,7 +74,10 @@ function App() {
         <div className="sap_data">
           <h3>ST Master Data</h3>
           <ul>
-            <li className="flex"><span>ST GW</span><input type="text" value={`${masterDataArticleGrossWeight}`} onChange={(e) => setMasterDataArticleGrossWeight(e.target.value)} /><span className="append">kg</span></li>
+            <li className="flex">
+              <span>ST GW</span>
+              <input type="text" className="input_center" value={`${masterDataArticleGrossWeight}`} onChange={(e) => setMasterDataArticleGrossWeight(e.target.value)} />
+              <span className="append">kg</span></li>
             <li className="flex"><span>ST NW</span><input type="text" /></li>
             <li className="flex"><span>ST LENGTH</span><input type="text" /></li>
             <li className="flex"><span>ST WIDTH</span><input type="text" /></li>
