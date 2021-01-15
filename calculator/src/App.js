@@ -7,7 +7,6 @@ function App() {
   const [masterDataColliGrossWeight, setMasterDataColliGrossWeight] = useState(
     0
   );
-
   const [
     masterDataArticleGrossWeight,
     setMasterDataArticleGrossWeight
